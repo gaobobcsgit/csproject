@@ -1,0 +1,14 @@
+import {
+  useFonts,
+  <% service.fontSets.forEach(function(fontSet){ -%>
+  <%- getFontName(fontSet) %>,
+  <% }); %>
+} from "@expo-google-fonts/dev";
+
+
+
+ let [fontsLoaded] = useFonts({
+    <% service.fontSets.forEach(function(fontSet){ -%>
+    <%- getFontName(fontSet) %>,
+    <% }); %>
+  });
